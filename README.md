@@ -7,3 +7,7 @@
 - get__json.php (сборка основного массива проверок через php query). Идет сбор первых 100 найденных ссылок на странице и прогон по ним.
 - /components_for_front/* - далее идет сбор через эти компоненты
 - после успешных проверок - идет запись в бд json_to_bd.php
+
+![Image alt](https://github.com/poring931/auto_audit_site_service/raw/main/2022-02-01_17-33-31.png) 
+![Image alt](https://github.com/poring931/auto_audit_site_service/raw/main/2022-02-01_17-33-58.png) 
+![Image alt](https://github.com/poring931/auto_audit_site_service/raw/main/2022-02-01_17-33-58.png) 
