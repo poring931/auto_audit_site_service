@@ -1,0 +1,308 @@
+*{box-sizing: border-box;}
+body{
+  /* max-width:1400px */
+}
+.audit__wrapper *{
+  font-size: 16px;
+}
+.audit__wrapper{
+    position: absolute;
+    top:50%;
+    padding:30px;
+/* width:100%; */
+    width: 80px;
+    left:50%;
+        background: url(/phpQuery__crawling/loading.svg) no-repeat;
+        background-position: center;
+        background-size: contain;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+  /* border: 2px solid red; */
+    padding:40px;
+}
+.other_audits{
+      display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    width: 55%;
+}
+details ul{
+  position: absolute;
+  background: #fff;
+  z-index: 432234;
+  padding:40px;
+  border:1px solid black;
+}
+.container{
+  width: 1400px;
+  max-width: unset;
+}
+.audit__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+    align-items: center;
+        row-gap: 30px;
+        column-gap: 40px;
+}
+.audit__item{
+     padding: 7px;
+     display:none;
+     /* opacity: 0; */
+     width: 25%;
+     position: relative;
+     border: 1px solid black;
+         width: 22%;
+             word-break: break-word;
+     /* transform: scale(0);
+     
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+     -ms-transform: scale(0);
+     -o-transform: scale(0); */
+}
+.audit__item:not(.external_script):hover {
+  height: 115px;
+}
+.audit__item:not(.external_script):hover .audit__item__description{
+    position: absolute;
+    height: auto;
+    z-index: 555555;
+    background: white!important;
+    bottom: 0;
+    transform: translateY(100%);
+}
+.audit__item:hover .audit__item__description{
+    position: absolute;
+    height: auto;
+    z-index: 555555;
+    background: white!important;
+    bottom: 0;
+    transform: translateY(100%);
+}
+.audit__item__description:before{
+     content: '';
+     border-top: 1px solid red;
+     width: 100%;
+     display: block;
+     /* margin: 10px 0; */
+     position: absolute;
+     top: -10px;
+     left: 0;
+}
+.audit__item__description {
+  position: relative;
+height: 55px;
+text-align: center;
+width: 100%;
+background: url(/phpQuery__crawling/loading.svg) no-repeat;
+background-position: center;
+background-size: contain;
+margin-top: 20px;
+position: relative;
+}
+.audit__list .external_script:first-child {
+  display:none!important;
+}
+.external_script .audit__item__description{
+  background:unset;
+}
+.audit__item__notice {
+   /*display: none;
+   */
+   overflow: hidden;
+   opacity: 0;
+   height: 0;
+   /* transition: 0.5s;
+   -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -ms-transition: 0.5s;
+   -o-transition: 0.5s; */
+}
+.audit__item__notice ol li{
+font-size: 0.8em;
+}
+.audit__item__notice ol{
+  opacity: 0;
+  transition: 1.3s;
+  -webkit-transition: 1.3s;
+  -moz-transition: 1.3s;
+  -ms-transition: 1.3s;
+  -o-transition: 1.3s;
+}
+.external_script{
+  opacity: 1;
+  cursor: pointer;
+  display:none;
+  
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.external_script:hover .audit__item__notice {
+  opacity: 1;
+  height: 250px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.external_script:hover .audit__item__description {
+  height: 30px;
+}
+.external_script:hover ol {
+ opacity: 1;
+ transition: 0.4s;
+ transition: 1.3s;
+ -webkit-transition: 1.3s;
+ -moz-transition: 1.3s;
+ -ms-transition: 1.3s;
+ -o-transition: 1.3s;
+}
+.external_script:not(.without_hover):after{
+  content:'';
+  background:url('/phpQuery__crawling/question.png') no-repeat;
+    width: 33px;
+    height: 32px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+  
+    background-size: cover;
+  }
+
+  .p-floating-container {
+    position: relative;
+        
+  }
+  .p-floating-container input{
+    height: 50px;
+        
+  }
+
+  .p-floating-container label {
+    /* Position the label */
+    left: 8px;
+    position: absolute;
+    top: 0;
+
+    /* Hide it by default */
+    opacity: 0;
+    transition: 'all 200ms',
+  }
+  .p-floating-container input:not(:placeholder-shown)+label {
+    background: #FFF;
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+
+
+  .audit__wrapper{
+    /* display: none */
+  }
+
+
+  .form__audit__wrapper{
+    position: absolute;
+    top: 50%;
+    left:70%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    max-width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+  }
+  .p-floating-container input{
+        width: 252px;
+        padding-left: 15px;
+  }
+  .form__audit__submit{
+height: 50px;
+padding: 5px 20px;
+    margin: 20px auto 20px;
+  }
+  .form__audit{
+        display: flex;
+        flex-direction: column;
+  }
+
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1839px!important;
+  }
+
+
+
+
+
+
+
+
+/* форма выбора ширины */
+.radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+
+  border-radius: 6px;
+}
+
+.radio-container * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.radio-container .radio-btn {
+
+  overflow: hidden;
+}
+
+.radio-container .radio-btn:last-child {
+  border-right: 0px;
+}
+
+.radio-container .radio-btn.nth-2 {
+  width: calc(50% - 1px);
+}
+
+.radio-container .radio-btn.nth-3 {
+  width: calc(33.3333% - 1.4px);
+}
+
+.radio-container .radio-btn.nth-4 {
+  width: calc(25% - 1.5px);
+}
+
+.radio-container .radio-btn label {
+  background-color: transparent;
+  color: #000;
+  display: block;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.radio-container .radio-btn input {
+  display: none;
+}
+
+.radio-container .radio-btn input:checked+label {
+  background-color: #0082fe;
+  color: #fff;
+}
